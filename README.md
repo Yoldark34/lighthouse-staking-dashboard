@@ -6,7 +6,7 @@ It is not the same as the prysm's one because lighthouse do not provide the same
 It is my first exported dashbord, you may need to adapt it to your usage. Feel free to open issues and provide new elements improvment.
 
 You need cryptowat to retrieve currency price Here is the tuto from prysm https://docs.prylabs.network/docs/prysm-usage/monitoring/currency-converter/  
-I should run without though.  
+It should run without though.  
 Supports pairs: etheur,ethusd,ethgbp,ethcad,ethchf,ethjpy,ethbtc
 
 # Features
