@@ -13,6 +13,12 @@ Supports pairs: etheur,ethusd,ethgbp,ethcad,ethchf,ethjpy,ethbtc
 This graph is gain and running monitoring oriented, you should use another graph if you want system monitoring oriented graphs 
 <img src=preview.PNG>
 
+# Requirement
+* Grafana
+* Prometheus
+* Cryptowat (optionnal)
+* Lighthouse "Dr. Wong" version with metrics enabled (bn et vc)  and validator monitor on bc 
+
 # Features
 * Handle lot of keys
 * Display anualized %
