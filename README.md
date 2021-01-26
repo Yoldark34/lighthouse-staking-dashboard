@@ -16,5 +16,6 @@ It is my first exported dashbord, you may need to adapt it to your usage. Feel f
 # Issues
 * Cpu usage can't be displayed as it is not provided
 * Process starting time is an educated guess as not provided, it should be enough
+* The bottom node graph is supposed to display global balance for exited and withdrawable validators. This is not the case as lighthouse do not provide this info.
 
 eth donation : 0x945DF808617bDD3753237eCF0d5D2A8EEedE76d2  
