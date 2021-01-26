@@ -10,7 +10,7 @@ You need cryptowat to retrieve currency price Here is the tuto from prysm https:
 It should run without though.  
 Supports pairs: etheur,ethusd,ethgbp,ethcad,ethchf,ethjpy,ethbtc
 
-
+This graph is gain and running monitoring oriented, you should use another graph if you want system monitoring oriented graphs 
 <img src=preview.PNG>
 
 # Features
@@ -20,9 +20,11 @@ Supports pairs: etheur,ethusd,ethgbp,ethcad,ethchf,ethjpy,ethbtc
 * Alway display eth gains
 * Display status of validators (was very hard to do)
 * Built in alerts
+* Display attestation, aggregate and proposed count per validators
+* Keep tracks of daily and montly income
 
 # TODO
-* Add aggregated and proposed blocks in the validator table (there is only attestation right now)
+* ~Add aggregated and proposed blocks in the validator table (there is only attestation right now)~
 
 # Issues
 * Cpu usage can't be displayed as it is not provided
