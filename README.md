@@ -10,6 +10,9 @@ You need cryptowat to retrieve currency price Here is the tuto from prysm https:
 It should run without though.  
 Supports pairs: etheur,ethusd,ethgbp,ethcad,ethchf,ethjpy,ethbtc
 
+
+<img src=preview.PNG>
+
 # Features
 * Handle lot of keys
 * Display anualized %
