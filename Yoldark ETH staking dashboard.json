@@ -98,7 +98,7 @@
   "gnetId": null,
   "graphTooltip": 1,
   "id": null,
-  "iteration": 1611619545675,
+  "iteration": 1611626580117,
   "links": [],
   "panels": [
     {
@@ -1680,7 +1680,7 @@
         },
         {
           "$$hashKey": "object:291",
-          "alias": "att",
+          "alias": "Attestation",
           "align": "auto",
           "colorMode": "value",
           "colors": [
@@ -1691,11 +1691,47 @@
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": 0,
           "mappingType": 1,
-          "pattern": "Value",
+          "pattern": "Value #A",
           "thresholds": [
             "5",
             "225"
           ],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "$$hashKey": "object:143718",
+          "alias": "Aggregate",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "mappingType": 1,
+          "pattern": "Value #B",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "$$hashKey": "object:143789",
+          "alias": "Proposal",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "mappingType": 1,
+          "pattern": "Value #C",
+          "thresholds": [],
           "type": "number",
           "unit": "short"
         }
@@ -1704,11 +1740,31 @@
         {
           "expr": "max by (validator) (validator_monitor_unaggregated_attestation_total)",
           "format": "table",
+          "hide": false,
           "instant": true,
           "interval": "",
           "intervalFactor": 1,
           "legendFormat": "",
           "refId": "A"
+        },
+        {
+          "expr": "max by (validator) (validator_monitor_aggregated_attestation_total)",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "B"
+        },
+        {
+          "expr": "max by (validator) (validator_monitor_beacon_block_total)",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "C"
         }
       ],
       "timeFrom": null,
@@ -3507,6 +3563,7 @@
       "targets": [
         {
           "expr": "error_total{job=\"lighthouse\"} - error_total{job=\"lighthouse\"} offset 1h",
+          "hide": false,
           "instant": false,
           "interval": "",
           "legendFormat": "error",
@@ -3514,6 +3571,7 @@
         },
         {
           "expr": "warn_total{job=\"lighthouse\"} - warn_total{job=\"lighthouse\"} offset 1h",
+          "hide": false,
           "instant": false,
           "interval": "",
           "legendFormat": "warning",
@@ -4085,5 +4143,5 @@
   "timezone": "",
   "title": "ETH staking dashboard lot keys for lighthouse",
   "uid": "t2yHaa3Zz3lot",
-  "version": 142
+  "version": 144
 }
