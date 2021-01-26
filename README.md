@@ -1,12 +1,12 @@
 # Lighthouse staking dashboard
 
 Made by Yoldark from Prysm lot of keys dashboard
-It is not the same as the prysm's one because lighthouse do not provide the same informations. I have adapted the dashboard to meke it works. I upgraded the dashboard and changed a lot of things making it not a 1:1 copy of the prysm dashboard.  
-Doc for the prysm dashboaard : https://docs.prylabs.network/docs/prysm-usage/monitoring/grafana-dashboard/#creating-and-importing-dashboards
+It is not the same as the prysm's one because lighthouse do not provide the same information. I have adapted the dashboard to make it works. I upgraded the dashboard and changed a lot of things making it not a 1:1 copy of the prysm dashboard.  
+Doc for the prysm dashboard : https://docs.prylabs.network/docs/prysm-usage/monitoring/grafana-dashboard/#creating-and-importing-dashboards
 
-It is my first exported dashbord, you may need to adapt it to your usage. Feel free to open issues and provide new elements improvment.
+It is my first exported dashboard, you may need to adapt it to your usage. Feel free to open issues and provide new elements improvement.
 
-You need cryptowat to retrieve currency price Here is the tuto from prysm https://docs.prylabs.network/docs/prysm-usage/monitoring/currency-converter/  
+You need cryptowat to retrieve currency price Here is the doc from prysm https://docs.prylabs.network/docs/prysm-usage/monitoring/currency-converter/  
 It should run without though.  
 Supports pairs: etheur,ethusd,ethgbp,ethcad,ethchf,ethjpy,ethbtc
 
@@ -21,13 +21,13 @@ This graph is gain and running monitoring oriented, you should use another graph
 
 # Features
 * Handle lot of keys
-* Display anualized %
-* Support currency convertion thanks cryptowat
-* Alway display eth gains
+* Display annualized %
+* Support currency conversion thanks cryptowat
+* Always display eth gains
 * Display status of validators (was very hard to do)
 * Built in alerts
 * Display attestation, aggregate and proposed count per validators
-* Keep tracks of daily and montly income
+* Keep tracks of daily and monthly income
 
 # TODO
 * ~Add aggregated and proposed blocks in the validator table (there is only attestation right now)~
