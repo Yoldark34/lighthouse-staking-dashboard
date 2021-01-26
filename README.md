@@ -8,7 +8,7 @@ It is my first exported dashbord, you may need to adapt it to your usage. Feel f
 # Features
 * Handle lot of keys
 * Display anualized %
-* Support currency convertion
+* Support currency convertion thanks cryptowat
 * Alway display eth gains
 * Display status of validators (was very hard to do)
 * Built in alerts
