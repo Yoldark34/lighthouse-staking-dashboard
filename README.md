@@ -18,6 +18,10 @@ Supports pairs: etheur,ethusd,ethgbp,ethcad,ethchf,ethjpy,ethbtc
 * Display status of validators (was very hard to do)
 * Built in alerts
 
+# TODO
+* Log types counter are merged, need warning and error counter
+* Add aggregated and proposed blocks in the validator table (there is only attestation right now)
+
 # Issues
 * Cpu usage can't be displayed as it is not provided
 * Process starting time is an educated guess as not provided, it should be enough
