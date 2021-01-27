@@ -33,7 +33,7 @@ This graph is gain and running monitoring oriented, you should use another graph
 * ~Add aggregated and proposed blocks in the validator table (there is only attestation right now)~
 
 # Issues
-* Cpu usage can't be displayed as it is not provided
+* ~Cpu usage can't be displayed as it is not provided~ Load avg added which should be a suitable solution.
 * Process starting time is an educated guess as not provided, it should be enough
 * The bottom node graph is supposed to display global balance for exited and withdrawable validators. This is not the case as lighthouse do not provide this info.
 * ~Log types counter are merged, need warning and error counter~ It is because there is no error logs
