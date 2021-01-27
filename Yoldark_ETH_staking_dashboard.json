@@ -98,7 +98,7 @@
   "gnetId": null,
   "graphTooltip": 1,
   "id": null,
-  "iteration": 1611626580117,
+  "iteration": 1611752271369,
   "links": [],
   "panels": [
     {
@@ -1408,7 +1408,7 @@
         "y": 3
       },
       "hiddenSeries": false,
-      "id": 2,
+      "id": 87,
       "legend": {
         "avg": false,
         "current": false,
@@ -1436,6 +1436,7 @@
         {
           "expr": "(validator_monitor_balance_gwei > 16E9)/1E9",
           "format": "time_series",
+          "hide": false,
           "instant": false,
           "interval": "",
           "intervalFactor": 1,
@@ -1539,7 +1540,12 @@
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
-      "seriesOverrides": [],
+      "seriesOverrides": [
+        {
+          "alias": "/load avg */",
+          "yaxis": 2
+        }
+      ],
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
@@ -1555,11 +1561,17 @@
           "interval": "",
           "legendFormat": "memory {{job}}",
           "refId": "C"
+        },
+        {
+          "expr": "system_loadavg_1",
+          "instant": false,
+          "interval": "",
+          "legendFormat": "load avg {{job}}",
+          "refId": "B"
         }
       ],
       "thresholds": [
         {
-          "$$hashKey": "object:68953",
           "colorMode": "critical",
           "fill": true,
           "line": true,
@@ -1587,7 +1599,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:68927",
           "decimals": null,
           "format": "decbytes",
           "label": "mem usage",
@@ -1597,14 +1608,13 @@
           "show": true
         },
         {
-          "$$hashKey": "object:68928",
           "decimals": 1,
-          "format": "percent",
+          "format": "percentunit",
           "label": "CPU usage rate",
           "logBase": 1,
           "max": null,
           "min": null,
-          "show": false
+          "show": true
         }
       ],
       "yaxis": {
@@ -1639,7 +1649,6 @@
       },
       "styles": [
         {
-          "$$hashKey": "object:289",
           "alias": "",
           "align": "auto",
           "colorMode": null,
@@ -1657,7 +1666,6 @@
           "unit": "short"
         },
         {
-          "$$hashKey": "object:290",
           "alias": "",
           "align": "auto",
           "colorMode": null,
@@ -1679,7 +1687,6 @@
           "unit": "short"
         },
         {
-          "$$hashKey": "object:291",
           "alias": "Attestation",
           "align": "auto",
           "colorMode": "value",
@@ -1700,7 +1707,6 @@
           "unit": "short"
         },
         {
-          "$$hashKey": "object:143718",
           "alias": "Aggregate",
           "align": "auto",
           "colorMode": null,
@@ -1718,7 +1724,6 @@
           "unit": "short"
         },
         {
-          "$$hashKey": "object:143789",
           "alias": "Proposal",
           "align": "auto",
           "colorMode": null,
@@ -1800,7 +1805,6 @@
       },
       "styles": [
         {
-          "$$hashKey": "object:293",
           "alias": "",
           "align": "auto",
           "colorMode": null,
@@ -1818,7 +1822,6 @@
           "unit": "short"
         },
         {
-          "$$hashKey": "object:294",
           "alias": "",
           "align": "auto",
           "colorMode": null,
@@ -1841,7 +1844,6 @@
           "valueMaps": []
         },
         {
-          "$$hashKey": "object:295",
           "alias": "balance",
           "align": "auto",
           "colorMode": "value",
@@ -1862,7 +1864,6 @@
           "unit": "short"
         },
         {
-          "$$hashKey": "object:43957",
           "alias": "",
           "align": "auto",
           "colorMode": "value",
@@ -1883,32 +1884,26 @@
           "unit": "short",
           "valueMaps": [
             {
-              "$$hashKey": "object:43998",
               "text": "Pending",
               "value": "0"
             },
             {
-              "$$hashKey": "object:44040",
               "text": "Active",
               "value": "1"
             },
             {
-              "$$hashKey": "object:44062",
               "text": "Exited",
               "value": "10"
             },
             {
-              "$$hashKey": "object:44166",
               "text": "Withdrawable",
               "value": "110"
             },
             {
-              "$$hashKey": "object:44188",
               "text": "Slashed",
               "value": "1010"
             },
             {
-              "$$hashKey": "object:44907",
               "text": "Slashed Withdrawable",
               "value": "1110"
             }
@@ -2078,7 +2073,6 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "$$hashKey": "object:3476",
           "alias": "Hourly loosing",
           "yaxis": 2
         }
@@ -2125,7 +2119,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:7470",
           "decimals": 4,
           "format": "short",
           "label": "ETH",
@@ -2135,7 +2128,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:7471",
           "decimals": 4,
           "format": "short",
           "label": "",
@@ -2214,7 +2206,6 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "$$hashKey": "object:13541",
           "alias": "Daily loosing",
           "yaxis": 2
         }
@@ -2260,7 +2251,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:7335",
           "decimals": 4,
           "format": "short",
           "label": "ETH",
@@ -2270,7 +2260,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:7336",
           "decimals": 4,
           "format": "short",
           "label": null,
@@ -2891,6 +2880,7 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "${DS_PROMETHEUS}",
+      "description": "I'm not sure about this one yet",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -2932,7 +2922,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "beacon_prev_epoch_target_gwei/beacon_prev_epoch_active_gwei*100",
+          "expr": "beacon_participation_prev_epoch_attester*100",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -2944,7 +2934,8 @@
           "fill": true,
           "line": true,
           "op": "lt",
-          "value": 66
+          "value": 66,
+          "yaxis": "left"
         }
       ],
       "timeFrom": null,
@@ -3140,7 +3131,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:1263",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3149,7 +3139,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:1264",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3271,7 +3260,6 @@
       ],
       "thresholds": [
         {
-          "$$hashKey": "object:602",
           "colorMode": "critical",
           "fill": true,
           "line": true,
@@ -3332,7 +3320,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:9557",
           "decimals": 1,
           "format": "short",
           "label": null,
@@ -3342,7 +3329,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:9558",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3680,7 +3666,6 @@
       ],
       "thresholds": [
         {
-          "$$hashKey": "object:171",
           "colorMode": "critical",
           "fill": true,
           "line": true,
@@ -3708,7 +3693,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:75",
           "decimals": 8,
           "format": "short",
           "label": "",
@@ -3718,7 +3702,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:76",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3859,7 +3842,6 @@
       ],
       "thresholds": [
         {
-          "$$hashKey": "object:454",
           "colorMode": "critical",
           "fill": true,
           "line": true,
@@ -3887,7 +3869,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:406",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3896,7 +3877,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:407",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4005,7 +3985,6 @@
       ],
       "thresholds": [
         {
-          "$$hashKey": "object:502",
           "colorMode": "critical",
           "fill": true,
           "line": true,
@@ -4033,7 +4012,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:445",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4042,9 +4020,154 @@
           "show": true
         },
         {
-          "$$hashKey": "object:446",
           "format": "short",
           "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "alert": {
+        "alertRuleTags": {},
+        "conditions": [
+          {
+            "evaluator": {
+              "params": [
+                0.01
+              ],
+              "type": "lt"
+            },
+            "operator": {
+              "type": "and"
+            },
+            "query": {
+              "params": [
+                "A",
+                "10s",
+                "now"
+              ]
+            },
+            "reducer": {
+              "params": [],
+              "type": "last"
+            },
+            "type": "query"
+          }
+        ],
+        "executionErrorState": "alerting",
+        "for": "0m",
+        "frequency": "1m",
+        "handler": 1,
+        "message": "Validator loosing money !",
+        "name": "Validator loosing money Alert",
+        "noDataState": "keep_state",
+        "notifications": []
+      },
+      "aliasColors": {
+        "0x8926562b": "blue",
+        "0xa92dcbcf": "orange",
+        "0xafafbadf": "rgb(189, 181, 0)",
+        "0xb96135dd": "purple"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "${DS_PROMETHEUS}",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 1,
+        "w": 4,
+        "x": 20,
+        "y": 30
+      },
+      "hiddenSeries": false,
+      "id": 2,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "rate(validator_monitor_balance_gwei[840s])",
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [
+        {
+          "colorMode": "critical",
+          "fill": true,
+          "line": true,
+          "op": "lt",
+          "value": 0.01,
+          "yaxis": "left"
+        }
+      ],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Alert : Validator loosing money",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 4,
+          "format": "short",
+          "label": "ETH",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "decimals": null,
+          "format": "short",
+          "label": "",
           "logBase": 1,
           "max": null,
           "min": null,
@@ -4143,5 +4266,5 @@
   "timezone": "",
   "title": "ETH staking dashboard lot keys for lighthouse",
   "uid": "t2yHaa3Zz3lot",
-  "version": 144
+  "version": 153
 }
