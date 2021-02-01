@@ -98,7 +98,7 @@
   "gnetId": null,
   "graphTooltip": 1,
   "id": null,
-  "iteration": 1611752271369,
+  "iteration": 1612140648733,
   "links": [],
   "panels": [
     {
@@ -715,7 +715,7 @@
         "colorMode": "background",
         "graphMode": "none",
         "justifyMode": "auto",
-        "orientation": "horizontal",
+        "orientation": "vertical",
         "reduceOptions": {
           "calcs": [
             "mean"
@@ -932,7 +932,7 @@
         "colorMode": "background",
         "graphMode": "none",
         "justifyMode": "auto",
-        "orientation": "horizontal",
+        "orientation": "vertical",
         "reduceOptions": {
           "calcs": [
             "mean"
@@ -2489,7 +2489,7 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "${DS_PROMETHEUS}",
-      "description": "This graph is made for trading purpose mostly.\nSupposing that if a lot of validators are exiting, price is gonna dump.\n\nAlso this can prevent to exit while exiting queue is too long, same for depositing while pending queue is too long.\n\n",
+      "description": "This graph is made for trading purpose mostly.\nSupposing that if a lot of validators are exiting, price is gonna dump.\n\nYoldark : Not working as supposed right now because lighthouse do not provide enough information on the state of the network\n\nAlso this can prevent to exit while exiting queue is too long, same for depositing while pending queue is too long.\n\n",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -2547,22 +2547,8 @@
           "refId": "A"
         },
         {
-          "expr": "validator_monitor_balance_gwei / 1E9",
-          "hide": true,
-          "interval": "",
-          "legendFormat": "Pending",
-          "refId": "B"
-        },
-        {
-          "expr": "validators_total_balance{state=\"Exiting\"} / 10e8",
-          "hide": true,
-          "interval": "",
-          "legendFormat": "Exiting",
-          "refId": "C"
-        },
-        {
-          "expr": "beacon_prev_epoch_target_gwei/beacon_prev_epoch_active_gwei*100",
-          "hide": true,
+          "expr": "beacon_participation_prev_epoch_attester*100",
+          "hide": false,
           "instant": false,
           "interval": "",
           "legendFormat": "Participation rate",
@@ -4266,5 +4252,5 @@
   "timezone": "",
   "title": "ETH staking dashboard lot keys for lighthouse",
   "uid": "t2yHaa3Zz3lot",
-  "version": 153
+  "version": 155
 }
