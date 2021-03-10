@@ -98,7 +98,7 @@
   "gnetId": null,
   "graphTooltip": 1,
   "id": null,
-  "iteration": 1612140648733,
+  "iteration": 1615384841602,
   "links": [],
   "panels": [
     {
@@ -1230,59 +1230,24 @@
       "pluginVersion": "7.0.0",
       "targets": [
         {
-          "expr": "avg(validator_monitor_unaggregated_attestation_total)*384/3600",
+          "expr": "(time()-process_start_time_seconds{job=\"$node_job\"})/3600",
+          "hide": false,
           "interval": "",
           "legendFormat": "Beacon",
           "refId": "B"
         },
         {
-          "expr": "vc_signed_attestations_total*384/3600",
+          "expr": "(time()-process_start_time_seconds{job=\"$validator_job\"})/3600",
           "instant": false,
           "interval": "",
           "legendFormat": "Validator duration sec",
           "refId": "A"
-        },
-        {
-          "expr": "validator_monitor_validators_total",
-          "interval": "",
-          "legendFormat": "Validators qty",
-          "refId": "C"
         }
       ],
       "timeFrom": null,
       "timeShift": null,
       "title": "Process Started",
-      "transformations": [
-        {
-          "id": "calculateField",
-          "options": {
-            "alias": "Validator",
-            "binary": {
-              "left": "Validator duration sec",
-              "operator": "/",
-              "reducer": "sum",
-              "right": "Validators qty"
-            },
-            "mode": "binary",
-            "reduce": {
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "Validator": false,
-              "Validator duration sec": true,
-              "Validators qty": true,
-              "validator_monitor_validators_total{instance=\"localhost:5054\", job=\"lighthouse\"}": true
-            },
-            "indexByName": {},
-            "renameByName": {}
-          }
-        }
-      ],
+      "transformations": [],
       "type": "stat"
     },
     {
@@ -1464,6 +1429,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:6403",
           "decimals": 4,
           "format": "short",
           "label": "ETH",
@@ -1473,6 +1439,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:6404",
           "decimals": null,
           "format": "short",
           "label": "",
@@ -1542,6 +1509,7 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
+          "$$hashKey": "object:32101",
           "alias": "/load avg */",
           "yaxis": 2
         }
@@ -1572,11 +1540,12 @@
       ],
       "thresholds": [
         {
+          "$$hashKey": "object:68953",
           "colorMode": "critical",
           "fill": true,
           "line": true,
           "op": "gt",
-          "value": 4000000000,
+          "value": 5000000000,
           "yaxis": "left"
         }
       ],
@@ -1599,6 +1568,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:68927",
           "decimals": null,
           "format": "decbytes",
           "label": "mem usage",
@@ -1608,6 +1578,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:68928",
           "decimals": 1,
           "format": "percentunit",
           "label": "CPU usage rate",
@@ -1649,6 +1620,7 @@
       },
       "styles": [
         {
+          "$$hashKey": "object:289",
           "alias": "",
           "align": "auto",
           "colorMode": null,
@@ -1666,6 +1638,7 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:290",
           "alias": "",
           "align": "auto",
           "colorMode": null,
@@ -1687,6 +1660,7 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:291",
           "alias": "Attestation",
           "align": "auto",
           "colorMode": "value",
@@ -1707,6 +1681,7 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:143718",
           "alias": "Aggregate",
           "align": "auto",
           "colorMode": null,
@@ -1724,6 +1699,7 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:143789",
           "alias": "Proposal",
           "align": "auto",
           "colorMode": null,
@@ -1805,6 +1781,7 @@
       },
       "styles": [
         {
+          "$$hashKey": "object:293",
           "alias": "",
           "align": "auto",
           "colorMode": null,
@@ -1822,6 +1799,7 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:294",
           "alias": "",
           "align": "auto",
           "colorMode": null,
@@ -1844,6 +1822,7 @@
           "valueMaps": []
         },
         {
+          "$$hashKey": "object:295",
           "alias": "balance",
           "align": "auto",
           "colorMode": "value",
@@ -1864,6 +1843,7 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:43957",
           "alias": "",
           "align": "auto",
           "colorMode": "value",
@@ -1884,26 +1864,32 @@
           "unit": "short",
           "valueMaps": [
             {
+              "$$hashKey": "object:43998",
               "text": "Pending",
               "value": "0"
             },
             {
+              "$$hashKey": "object:44040",
               "text": "Active",
               "value": "1"
             },
             {
+              "$$hashKey": "object:44062",
               "text": "Exited",
               "value": "10"
             },
             {
+              "$$hashKey": "object:44166",
               "text": "Withdrawable",
               "value": "110"
             },
             {
+              "$$hashKey": "object:44188",
               "text": "Slashed",
               "value": "1010"
             },
             {
+              "$$hashKey": "object:44907",
               "text": "Slashed Withdrawable",
               "value": "1110"
             }
@@ -2073,6 +2059,7 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
+          "$$hashKey": "object:3476",
           "alias": "Hourly loosing",
           "yaxis": 2
         }
@@ -2119,6 +2106,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:7470",
           "decimals": 4,
           "format": "short",
           "label": "ETH",
@@ -2128,6 +2116,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:7471",
           "decimals": 4,
           "format": "short",
           "label": "",
@@ -2206,6 +2195,7 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
+          "$$hashKey": "object:13541",
           "alias": "Daily loosing",
           "yaxis": 2
         }
@@ -2251,6 +2241,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:7335",
           "decimals": 4,
           "format": "short",
           "label": "ETH",
@@ -2260,6 +2251,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:7336",
           "decimals": 4,
           "format": "short",
           "label": null,
@@ -2530,6 +2522,7 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
+          "$$hashKey": "object:73766",
           "alias": "Participation rate",
           "fill": 0,
           "linewidth": 2,
@@ -2575,6 +2568,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:73777",
           "format": "short",
           "label": "ETH",
           "logBase": 1,
@@ -2583,12 +2577,13 @@
           "show": true
         },
         {
+          "$$hashKey": "object:73778",
           "decimals": null,
           "format": "percent",
           "label": "",
           "logBase": 1,
           "max": "100",
-          "min": "0",
+          "min": null,
           "show": true
         }
       ],
@@ -2650,7 +2645,7 @@
       "pluginVersion": "7.0.0",
       "targets": [
         {
-          "expr": "avg(validator_monitor_unaggregated_attestation_total)*384/3600",
+          "expr": "(time()-process_start_time_seconds{job=\"$node_job\"})/3600",
           "instant": true,
           "interval": "",
           "legendFormat": "",
@@ -2916,6 +2911,7 @@
       ],
       "thresholds": [
         {
+          "$$hashKey": "object:2960",
           "colorMode": "critical",
           "fill": true,
           "line": true,
@@ -2943,6 +2939,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:2785",
           "format": "percent",
           "label": null,
           "logBase": 1,
@@ -2951,6 +2948,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:2786",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3117,6 +3115,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:1263",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3125,6 +3124,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:1264",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3156,6 +3156,29 @@
               "params": [
                 "A",
                 "10s",
+                "now"
+              ]
+            },
+            "reducer": {
+              "params": [],
+              "type": "last"
+            },
+            "type": "query"
+          },
+          {
+            "evaluator": {
+              "params": [
+                0.1
+              ],
+              "type": "lt"
+            },
+            "operator": {
+              "type": "or"
+            },
+            "query": {
+              "params": [
+                "B",
+                "5m",
                 "now"
               ]
             },
@@ -3226,26 +3249,21 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "avg(validator_monitor_unaggregated_attestation_total)*384/3600",
+          "expr": "(time()-process_start_time_seconds{job=\"lighthouse\"})/3600",
           "interval": "",
           "legendFormat": "{{job}}",
           "refId": "A"
         },
         {
-          "expr": "vc_signed_attestations_total*384/3600",
+          "expr": "(time()-process_start_time_seconds{job=\"lighthouse_validator\"})/3600",
           "interval": "",
-          "legendFormat": "attestation duration on 1 hour",
+          "legendFormat": "{{job}}",
           "refId": "B"
-        },
-        {
-          "expr": "vc_validators_total_count",
-          "interval": "",
-          "legendFormat": "validators count",
-          "refId": "C"
         }
       ],
       "thresholds": [
         {
+          "$$hashKey": "object:15443",
           "colorMode": "critical",
           "fill": true,
           "line": true,
@@ -3263,39 +3281,7 @@
         "sort": 0,
         "value_type": "individual"
       },
-      "transformations": [
-        {
-          "id": "calculateField",
-          "options": {
-            "alias": "lighthouse_validator",
-            "binary": {
-              "left": "attestation duration on 1 hour",
-              "operator": "/",
-              "reducer": "sum",
-              "right": "validators count"
-            },
-            "mode": "binary",
-            "reduce": {
-              "include": [
-                "lighthouse_validator",
-                "validators count"
-              ],
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "attestation duration on 1 hour": true,
-              "validators count": true
-            },
-            "indexByName": {},
-            "renameByName": {}
-          }
-        }
-      ],
+      "transformations": [],
       "type": "graph",
       "xaxis": {
         "buckets": null,
@@ -3306,6 +3292,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:9557",
           "decimals": 1,
           "format": "short",
           "label": null,
@@ -3315,6 +3302,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:9558",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3534,7 +3522,7 @@
       "pluginVersion": "7.0.0",
       "targets": [
         {
-          "expr": "error_total{job=\"lighthouse\"} - error_total{job=\"lighthouse\"} offset 1h",
+          "expr": "error_total{job=\"$node_job\"} - error_total{job=\"$node_job\"} offset 1h",
           "hide": false,
           "instant": false,
           "interval": "",
@@ -3542,7 +3530,7 @@
           "refId": "A"
         },
         {
-          "expr": "warn_total{job=\"lighthouse\"} - warn_total{job=\"lighthouse\"} offset 1h",
+          "expr": "warn_total{job=\"$validator_job\"} - warn_total{job=\"$validator_job\"} offset 1h",
           "hide": false,
           "instant": false,
           "interval": "",
@@ -3652,6 +3640,7 @@
       ],
       "thresholds": [
         {
+          "$$hashKey": "object:171",
           "colorMode": "critical",
           "fill": true,
           "line": true,
@@ -3679,6 +3668,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:75",
           "decimals": 8,
           "format": "short",
           "label": "",
@@ -3688,6 +3678,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:76",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3758,7 +3749,7 @@
         "handler": 1,
         "message": "NODE/VALIDATOR: THE NODE OR VALIDATOR IS DOWN FOR MORE THAN 1 MINUTE",
         "name": "NODE/VALIDATOR: Process down",
-        "noDataState": "no_data",
+        "noDataState": "alerting",
         "notifications": [
           {
             "uid": "USY-LmRGz"
@@ -3828,6 +3819,7 @@
       ],
       "thresholds": [
         {
+          "$$hashKey": "object:1961",
           "colorMode": "critical",
           "fill": true,
           "line": true,
@@ -3855,6 +3847,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:406",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3863,6 +3856,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:407",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3971,6 +3965,7 @@
       ],
       "thresholds": [
         {
+          "$$hashKey": "object:502",
           "colorMode": "critical",
           "fill": true,
           "line": true,
@@ -3998,6 +3993,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:445",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4006,6 +4002,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:446",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4115,6 +4112,7 @@
       ],
       "thresholds": [
         {
+          "$$hashKey": "object:250",
           "colorMode": "critical",
           "fill": true,
           "line": true,
@@ -4142,6 +4140,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:6403",
           "decimals": 4,
           "format": "short",
           "label": "ETH",
@@ -4151,6 +4150,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:6404",
           "decimals": null,
           "format": "short",
           "label": "",
@@ -4252,5 +4252,5 @@
   "timezone": "",
   "title": "ETH staking dashboard lot keys for lighthouse",
   "uid": "t2yHaa3Zz3lot",
-  "version": 155
+  "version": 166
 }
