@@ -17,7 +17,7 @@ This graph is gain and running monitoring oriented, you should use another graph
 * Grafana
 * Prometheus
 * Cryptowat (optionnal)
-* Lighthouse "Dr. Wong" version with metrics enabled (bn et vc)  and validator monitor on bc 
+* Lighthouse "Tony" version with metrics enabled (bn et vc)  and validator monitor on bc 
 
 # Features
 * Handle lot of keys
