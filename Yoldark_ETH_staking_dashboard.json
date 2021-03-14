@@ -98,7 +98,7 @@
   "gnetId": null,
   "graphTooltip": 1,
   "id": null,
-  "iteration": 1615384841602,
+  "iteration": 1615561867426,
   "links": [],
   "panels": [
     {
@@ -943,14 +943,14 @@
       "pluginVersion": "7.0.0",
       "targets": [
         {
-          "expr": "(sum(validator_monitor_balance_gwei) - sum(validator_monitor_balance_gwei offset 30d) - count(validator_monitor_balance_gwei > 16E9)*32E9 + count(validator_monitor_balance_gwei offset 30d > 0)*32E9)",
+          "expr": "((sum(validator_monitor_balance_gwei) - sum(validator_monitor_balance_gwei offset 30d) - count(validator_monitor_balance_gwei > 16E9)*32E9 + count(validator_monitor_balance_gwei offset 30d > 0)*32E9))/1E9",
           "instant": true,
           "interval": "",
           "legendFormat": "ETH",
           "refId": "A"
         },
         {
-          "expr": "(sum(validator_monitor_balance_gwei) - sum(validator_monitor_balance_gwei offset 30d) - count(validator_monitor_balance_gwei > 16E9)*32E9 + count(validator_monitor_balance_gwei offset 30d > 0)*32E9)*sum(crypto_currency{pair=\"eth$fiat\"})",
+          "expr": "((sum(validator_monitor_balance_gwei) - sum(validator_monitor_balance_gwei offset 30d) - count(validator_monitor_balance_gwei > 16E9)*32E9 + count(validator_monitor_balance_gwei offset 30d > 0)*32E9)*sum(crypto_currency{pair=\"eth$fiat\"}))/1E9",
           "instant": true,
           "interval": "",
           "legendFormat": "$fiat",
@@ -1429,7 +1429,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:6403",
           "decimals": 4,
           "format": "short",
           "label": "ETH",
@@ -1439,7 +1438,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:6404",
           "decimals": null,
           "format": "short",
           "label": "",
@@ -1509,7 +1507,6 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "$$hashKey": "object:32101",
           "alias": "/load avg */",
           "yaxis": 2
         }
@@ -1540,7 +1537,6 @@
       ],
       "thresholds": [
         {
-          "$$hashKey": "object:68953",
           "colorMode": "critical",
           "fill": true,
           "line": true,
@@ -1568,7 +1564,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:68927",
           "decimals": null,
           "format": "decbytes",
           "label": "mem usage",
@@ -1578,7 +1573,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:68928",
           "decimals": 1,
           "format": "percentunit",
           "label": "CPU usage rate",
@@ -1620,7 +1614,6 @@
       },
       "styles": [
         {
-          "$$hashKey": "object:289",
           "alias": "",
           "align": "auto",
           "colorMode": null,
@@ -1638,7 +1631,6 @@
           "unit": "short"
         },
         {
-          "$$hashKey": "object:290",
           "alias": "",
           "align": "auto",
           "colorMode": null,
@@ -1660,7 +1652,6 @@
           "unit": "short"
         },
         {
-          "$$hashKey": "object:291",
           "alias": "Attestation",
           "align": "auto",
           "colorMode": "value",
@@ -1681,7 +1672,6 @@
           "unit": "short"
         },
         {
-          "$$hashKey": "object:143718",
           "alias": "Aggregate",
           "align": "auto",
           "colorMode": null,
@@ -1699,7 +1689,6 @@
           "unit": "short"
         },
         {
-          "$$hashKey": "object:143789",
           "alias": "Proposal",
           "align": "auto",
           "colorMode": null,
@@ -1781,7 +1770,6 @@
       },
       "styles": [
         {
-          "$$hashKey": "object:293",
           "alias": "",
           "align": "auto",
           "colorMode": null,
@@ -1799,7 +1787,6 @@
           "unit": "short"
         },
         {
-          "$$hashKey": "object:294",
           "alias": "",
           "align": "auto",
           "colorMode": null,
@@ -1822,7 +1809,6 @@
           "valueMaps": []
         },
         {
-          "$$hashKey": "object:295",
           "alias": "balance",
           "align": "auto",
           "colorMode": "value",
@@ -1843,7 +1829,6 @@
           "unit": "short"
         },
         {
-          "$$hashKey": "object:43957",
           "alias": "",
           "align": "auto",
           "colorMode": "value",
@@ -1864,32 +1849,26 @@
           "unit": "short",
           "valueMaps": [
             {
-              "$$hashKey": "object:43998",
               "text": "Pending",
               "value": "0"
             },
             {
-              "$$hashKey": "object:44040",
               "text": "Active",
               "value": "1"
             },
             {
-              "$$hashKey": "object:44062",
               "text": "Exited",
               "value": "10"
             },
             {
-              "$$hashKey": "object:44166",
               "text": "Withdrawable",
               "value": "110"
             },
             {
-              "$$hashKey": "object:44188",
               "text": "Slashed",
               "value": "1010"
             },
             {
-              "$$hashKey": "object:44907",
               "text": "Slashed Withdrawable",
               "value": "1110"
             }
@@ -2059,7 +2038,6 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "$$hashKey": "object:3476",
           "alias": "Hourly loosing",
           "yaxis": 2
         }
@@ -2106,7 +2084,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:7470",
           "decimals": 4,
           "format": "short",
           "label": "ETH",
@@ -2116,7 +2093,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:7471",
           "decimals": 4,
           "format": "short",
           "label": "",
@@ -2195,7 +2171,6 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "$$hashKey": "object:13541",
           "alias": "Daily loosing",
           "yaxis": 2
         }
@@ -2241,7 +2216,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:7335",
           "decimals": 4,
           "format": "short",
           "label": "ETH",
@@ -2251,7 +2225,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:7336",
           "decimals": 4,
           "format": "short",
           "label": null,
@@ -2522,7 +2495,6 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "$$hashKey": "object:73766",
           "alias": "Participation rate",
           "fill": 0,
           "linewidth": 2,
@@ -2568,7 +2540,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:73777",
           "format": "short",
           "label": "ETH",
           "logBase": 1,
@@ -2577,7 +2548,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:73778",
           "decimals": null,
           "format": "percent",
           "label": "",
@@ -2911,7 +2881,6 @@
       ],
       "thresholds": [
         {
-          "$$hashKey": "object:2960",
           "colorMode": "critical",
           "fill": true,
           "line": true,
@@ -2939,7 +2908,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:2785",
           "format": "percent",
           "label": null,
           "logBase": 1,
@@ -2948,7 +2916,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:2786",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3115,7 +3082,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:1263",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3124,7 +3090,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:1264",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3263,7 +3228,6 @@
       ],
       "thresholds": [
         {
-          "$$hashKey": "object:15443",
           "colorMode": "critical",
           "fill": true,
           "line": true,
@@ -3292,7 +3256,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:9557",
           "decimals": 1,
           "format": "short",
           "label": null,
@@ -3302,7 +3265,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:9558",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3640,7 +3602,6 @@
       ],
       "thresholds": [
         {
-          "$$hashKey": "object:171",
           "colorMode": "critical",
           "fill": true,
           "line": true,
@@ -3668,7 +3629,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:75",
           "decimals": 8,
           "format": "short",
           "label": "",
@@ -3678,7 +3638,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:76",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3819,7 +3778,6 @@
       ],
       "thresholds": [
         {
-          "$$hashKey": "object:1961",
           "colorMode": "critical",
           "fill": true,
           "line": true,
@@ -3847,7 +3805,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:406",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3856,7 +3813,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:407",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3965,7 +3921,6 @@
       ],
       "thresholds": [
         {
-          "$$hashKey": "object:502",
           "colorMode": "critical",
           "fill": true,
           "line": true,
@@ -3993,7 +3948,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:445",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4002,7 +3956,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:446",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4112,7 +4065,6 @@
       ],
       "thresholds": [
         {
-          "$$hashKey": "object:250",
           "colorMode": "critical",
           "fill": true,
           "line": true,
@@ -4140,7 +4092,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:6403",
           "decimals": 4,
           "format": "short",
           "label": "ETH",
@@ -4150,7 +4101,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:6404",
           "decimals": null,
           "format": "short",
           "label": "",
@@ -4252,5 +4202,5 @@
   "timezone": "",
   "title": "ETH staking dashboard lot keys for lighthouse",
   "uid": "t2yHaa3Zz3lot",
-  "version": 166
+  "version": 168
 }
