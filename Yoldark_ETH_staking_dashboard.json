@@ -98,7 +98,7 @@
   "gnetId": null,
   "graphTooltip": 1,
   "id": null,
-  "iteration": 1615561867426,
+  "iteration": 1621453788421,
   "links": [],
   "panels": [
     {
@@ -1240,7 +1240,7 @@
           "expr": "(time()-process_start_time_seconds{job=\"$validator_job\"})/3600",
           "instant": false,
           "interval": "",
-          "legendFormat": "Validator duration sec",
+          "legendFormat": "Validator",
           "refId": "A"
         }
       ],
@@ -2506,7 +2506,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "validator_monitor_balance_gwei / 1E9",
+          "expr": "beacon_head_state_validator_balances_total / 1E9",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -3488,21 +3488,21 @@
           "hide": false,
           "instant": false,
           "interval": "",
-          "legendFormat": "error",
+          "legendFormat": "Errors",
           "refId": "A"
         },
         {
-          "expr": "warn_total{job=\"$validator_job\"} - warn_total{job=\"$validator_job\"} offset 1h",
+          "expr": "warn_total{job=\"$node_job\"} - warn_total{job=\"$node_job\"} offset 1h",
           "hide": false,
-          "instant": false,
           "interval": "",
-          "legendFormat": "warning",
-          "refId": "B"
+          "legendFormat": "Warns",
+          "refId": "C"
         }
       ],
       "timeFrom": null,
       "timeShift": null,
       "title": "Hourly log type counter",
+      "transformations": [],
       "type": "bargauge"
     },
     {
@@ -4202,5 +4202,5 @@
   "timezone": "",
   "title": "ETH staking dashboard lot keys for lighthouse",
   "uid": "t2yHaa3Zz3lot",
-  "version": 168
+  "version": 171
 }
