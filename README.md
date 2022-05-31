@@ -14,7 +14,7 @@ This graph is gain and running monitoring oriented, you should use another graph
 <img src=preview.PNG>
 
 # Requirement
-* Grafana
+* Grafana 8
 * Prometheus with more than 30 days of data retention
 * Cryptowat (optionnal)
 * Lighthouse "Tony" version with metrics enabled (bn et vc)  and validator monitor on bc 
